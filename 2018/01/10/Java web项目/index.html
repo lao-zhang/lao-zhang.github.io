@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>传统java web项目 | 老zhang Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="经过系统的理论学习和实践，鄙人对于不依赖于框架的传统java web工程有了一定的认识与掌握，现在结合具体项目来对传统java web工程整个构建工程进行分析。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="传统java web项目">
+<meta property="og:url" content="http://yoursite.com/2018/01/10/Java web项目/index.html">
+<meta property="og:site_name" content="老zhang Blog">
+<meta property="og:description" content="经过系统的理论学习和实践，鄙人对于不依赖于框架的传统java web工程有了一定的认识与掌握，现在结合具体项目来对传统java web工程整个构建工程进行分析。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-06T12:40:03.028Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="传统java web项目">
+<meta name="twitter:description" content="经过系统的理论学习和实践，鄙人对于不依赖于框架的传统java web工程有了一定的认识与掌握，现在结合具体项目来对传统java web工程整个构建工程进行分析。">
+  
+    <link rel="alternate" href="/atom.xml" title="老zhang Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">老zhang Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="https://lao-zhang.github.io">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java web项目" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/10/Java web项目/" class="article-date">
+  <time datetime="2018-01-10T03:40:00.000Z" itemprop="datePublished">2018-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      传统java web项目
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 经过系统的理论学习和实践，鄙人对于不依赖于框架的传统java web工程有了一定的认识与掌握，现在结合具体项目来对传统java web工程整个构建工程进行分析。</p>
+<a id="more"></a>
+<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>在我看来，一个传统的java web项目由数据库、逻辑事务处理、视图页面三部分组成。</p>
+<h5 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h5><p>​      用来存放一定量的数据。在我们写程序时，如果只是实现一个算法式的程序，所需要的数据通常经由键盘输入，这些数据具有不复用、数量较小、类型单一的特性。但如果实现处理现实事务的复杂程序时（比如记账本或者学生信息管理系统），涉及到的数据不仅数量较多，类型丰富，而且需要反复使用，这就需要程序跟数据库连接来读写数据了。</p>
+<p>​      数据库方面的操作包括：环境配置、创建数据库、创建表等。</p>
+<h5 id="逻辑事务处理："><a href="#逻辑事务处理：" class="headerlink" title="逻辑事务处理："></a>逻辑事务处理：</h5><p>​        这是整个工程的核心所在，对内要构建对象、设计方法、处理数据，对外要连接数据库、跟前端进行数据通信。</p>
+<p>​        逻辑事务处理方面的操作包括：java代码的编写、xml文件的编写、部分jsp和html页面的编写等。</p>
+<h5 id="视图页面："><a href="#视图页面：" class="headerlink" title="视图页面："></a>视图页面：</h5><p>​         跟用户最为密切一部分，用户通过前端（或称客户端）输入数据或者查看数据，通常由jsp或者html构成。</p>
+<p>​         视图页面的工作有：向逻辑事务处理环节发送表单、读取逻辑事务处理环节发送来的信息、一些javascript的编写、界面美观等。   </p>
+<p>###二、项目概述</p>
+<p>​     简单而具有代表性的项目便于说明问题，所以这里以一个大家很熟悉的个人记账项目作为说明的对象。</p>
+<p>​      个人账单的功能有：添加消费记录、查看所有消费记录、设置当月预算、消费分类、消费统计</p>
+<p>​       体现到具体程序中：数据库数据添加、修改、查询（未涉及到删除），使用java语言对数据进行一些简单处理等。</p>
+<p>​       总体说来，这个项目十分简单，但是具备了一个java web工程的必须成分，麻雀虽小，五脏俱全。</p>
+<h3 id="三、具体讲解"><a href="#三、具体讲解" class="headerlink" title="三、具体讲解"></a>三、具体讲解</h3><p>OK，现在我们步入正题。</p>
+<h5 id="part1"><a href="#part1" class="headerlink" title="part1"></a>part1</h5><p>首先我们设计本次项目涉及到的主要对象，确定其元素和方法，也为接下来创建数据库表作准备。</p>
+<p>使用cost对象作为记账本项目的对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">cost</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> cost;</div><div class="line">	<span class="keyword">private</span> String kind;</div><div class="line">	<span class="keyword">private</span> String message;</div><div class="line">	<span class="keyword">private</span> String year;</div><div class="line">	<span class="keyword">private</span> String month;</div><div class="line">	<span class="keyword">private</span> String day;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里要注意的是，根据规定，java web项目的对象需要具备「空构造方法」和「完整构造方法」，以及所有元素的「get」和「set」方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> 记账本;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">cost</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> cost;</div><div class="line">	<span class="keyword">private</span> String kind;</div><div class="line">	<span class="keyword">private</span> String message;</div><div class="line">	<span class="keyword">private</span> String year;</div><div class="line">	<span class="keyword">private</span> String month;</div><div class="line">	<span class="keyword">private</span> String day;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">cost</span><span class="params">()</span> </span>&#123;	</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">cost</span><span class="params">(<span class="keyword">int</span> cost,String kind,String message,String year,String month,String day)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>();</div><div class="line">		<span class="keyword">this</span>.cost=cost;</div><div class="line">		<span class="keyword">this</span>.kind=kind;</div><div class="line">		<span class="keyword">this</span>.message=message;</div><div class="line">		<span class="keyword">this</span>.year=year;</div><div class="line">		<span class="keyword">this</span>.month=month;</div><div class="line">		<span class="keyword">this</span>.day=day;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getMonth</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> month;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMonth</span><span class="params">(String month)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.month = month;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCost</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.cost;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCost</span><span class="params">(<span class="keyword">int</span> cost)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.cost=cost;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getKind</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.kind;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setKind</span><span class="params">(String kind)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.kind=kind;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getMessage</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> message;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMessage</span><span class="params">(String message)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.message = message;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getYear</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> year;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setYear</span><span class="params">(String year)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.year = year;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getDay</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> day;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDay</span><span class="params">(String day)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.day = day;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>根据cost对象的元素来创建数据库表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> money(<span class="keyword">cost</span> <span class="built_in">int</span> <span class="keyword">not</span> <span class="literal">null</span>, kind <span class="built_in">varchar</span>(<span class="number">20</span>),message <span class="built_in">varchar</span>(<span class="number">20</span>),<span class="keyword">year</span> <span class="built_in">varchar</span>(<span class="number">20</span>),<span class="keyword">month</span> <span class="built_in">varchar</span>(<span class="number">20</span>),<span class="keyword">day</span> <span class="built_in">varchar</span>(<span class="number">20</span>));</div></pre></td></tr></table></figure>
+<p>弄到这里我发现好像忽略了“每月预算”这一元素，但是由于预算数据使用的次数和地方都有限，所以我就不再为了它修改表结构和cost对象了，而是单独为其建立了一个表（排面满满）。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> ys(yusuan <span class="built_in">int</span> <span class="keyword">not</span> <span class="literal">null</span>);</div></pre></td></tr></table></figure>
+<p>至此，本工程数据方面的准备工作都已完成，part1到这里结束。</p>
+<h5 id="part2"><a href="#part2" class="headerlink" title="part2"></a>part2</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/10/Java web项目/" data-id="cjefnd25i0001rt76ro9muctr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/10/spring/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Spring学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/Python/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python笔记</div>
+    </a>
+  
+</nav>
+
+  
+    
+    
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2146648"></script>
+</section>
+    
+
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/10/spring/">Spring学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/10/Java web项目/">传统java web项目</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Python/">python笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/15/你想当程序员么？/">你想当程序员吗？</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/05/技术帖之贪心算法1/">技术帖之贪心算法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 老zhang  Q:1583707135<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="https://lao-zhang.github.io" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
