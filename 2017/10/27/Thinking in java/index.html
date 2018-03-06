@@ -5,17 +5,17 @@
   
   <title>thinking in java | 老zhang Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第二章7.编写一个程序，打印出从命令行获取的三个参数。为此，需要对代表命令行参数的String数组（main(String[] args)）建立索引。 对main中的String数组建立索引的说法我还是第一次听说。 作者给的程序是这样写的： 1234567891011121314package ssss;public class TestFour &amp;#123;	public static voi">
+  <meta name="description" content="第二章">
 <meta property="og:type" content="article">
 <meta property="og:title" content="thinking in java">
 <meta property="og:url" content="http://yoursite.com/2017/10/27/Thinking in java/index.html">
 <meta property="og:site_name" content="老zhang Blog">
-<meta property="og:description" content="第二章7.编写一个程序，打印出从命令行获取的三个参数。为此，需要对代表命令行参数的String数组（main(String[] args)）建立索引。 对main中的String数组建立索引的说法我还是第一次听说。 作者给的程序是这样写的： 1234567891011121314package ssss;public class TestFour &amp;#123;	public static voi">
+<meta property="og:description" content="第二章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-06T12:42:48.899Z">
+<meta property="og:updated_time" content="2018-03-06T12:47:10.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="thinking in java">
-<meta name="twitter:description" content="第二章7.编写一个程序，打印出从命令行获取的三个参数。为此，需要对代表命令行参数的String数组（main(String[] args)）建立索引。 对main中的String数组建立索引的说法我还是第一次听说。 作者给的程序是这样写的： 1234567891011121314package ssss;public class TestFour &amp;#123;	public static voi">
+<meta name="twitter:description" content="第二章">
   
     <link rel="alternate" href="/atom.xml" title="老zhang Blog" type="application/atom+xml">
   
@@ -86,8 +86,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><p>7.编写一个程序，打印出从命令行获取的三个参数。为此，需要对代表命令行参数的String数组（main(String[] args)）建立索引。</p>
+        <h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><a id="more"></a>
+<p>7.编写一个程序，打印出从命令行获取的三个参数。为此，需要对代表命令行参数的String数组（main(String[] args)）建立索引。</p>
 <p>对main中的String数组建立索引的说法我还是第一次听说。</p>
 <p>作者给的程序是这样写的：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> ssss;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFour</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span>(args.length&lt;<span class="number">3</span>) &#123;</div><div class="line">			System.out.println(<span class="string">"Need 3 argyments"</span>);</div><div class="line">			System.exit(<span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">		System.out.println(args[<span class="number">0</span>]);<span class="comment">//这里是输出String型数组args（之前一直以为这个数组是个摆设）</span></div><div class="line">		System.out.println(args[<span class="number">1</span>]);</div><div class="line">		System.out.println(args[<span class="number">2</span>]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -98,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/27/Thinking in java/" data-id="cjefnd2640005rt763afpvpox" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/27/Thinking in java/" data-id="cjefngbzc0003sm76aqzrctel" class="article-share-link">Share</a>
       
       
     </footer>
